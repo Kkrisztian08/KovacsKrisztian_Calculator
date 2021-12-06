@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.calculator.HelloController">
+<GridPane alignment="center" hgap="10" minHeight="190" minWidth="280" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <rowConstraints>
+        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints maxWidth="25.0" minWidth="25.0" prefWidth="25.0" />
+        <ColumnConstraints maxWidth="25.0" minWidth="25.0" prefWidth="25.0" />
+        <ColumnConstraints maxWidth="25.0" minWidth="25.0" prefWidth="25.0" />
+        <ColumnConstraints maxWidth="25.0" minWidth="25.0" prefWidth="25.0" />
+        <ColumnConstraints maxWidth="40.0" minWidth="20.0" prefWidth="30.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+    </columnConstraints>
+    <Spinner fx:id="elsoszam"  GridPane.columnSpan="2">
+        <valueFactory>
+            <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="1" initialValue="5" max="200" min="-100" />
+        </valueFactory>
+    </Spinner>
+    <Spinner fx:id="masodikszam"  prefHeight="25.0" prefWidth="65.0" GridPane.columnIndex="3" GridPane.columnSpan="4">
+        <valueFactory>
+            <SpinnerValueFactory.DoubleSpinnerValueFactory amountToStepBy="1" initialValue="2" max="200" min="-100" />
+        </valueFactory>
+    </Spinner>
+    <Button fx:id="osszeadas" alignment="CENTER" onAction="#osszeadas" text="+" GridPane.rowIndex="1" />
+    <Button fx:id="szorzas" alignment="CENTER" onAction="#szorzas" text="*" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <Button fx:id="kivonas" alignment="CENTER" onAction="#kivonas" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Button fx:id="maradekososztas" alignment="CENTER" onAction="#maradekososztas" text="\%" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+    <Button fx:id="maradekososztas" alignment="CENTER" onAction="#osztas" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+    <Label fx:id="eredmeny" alignment="CENTER" prefHeight="17.0" prefWidth="136.0" text="10" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+</GridPane>

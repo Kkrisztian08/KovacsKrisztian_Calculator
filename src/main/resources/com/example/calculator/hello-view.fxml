@@ -39,6 +39,6 @@
     <Button fx:id="szorzas" alignment="CENTER" onAction="#szorzas" text="*" GridPane.columnIndex="2" GridPane.rowIndex="1" />
     <Button fx:id="kivonas" alignment="CENTER" onAction="#kivonas" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
     <Button fx:id="maradekososztas" alignment="CENTER" onAction="#maradekososztas" text="\%" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-    <Button fx:id="maradekososztas" alignment="CENTER" onAction="#osztas" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+    <Button fx:id="osztas" alignment="CENTER" onAction="#osztas" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1" />
     <Label fx:id="eredmeny" alignment="CENTER" prefHeight="17.0" prefWidth="136.0" text="10" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
 </GridPane>

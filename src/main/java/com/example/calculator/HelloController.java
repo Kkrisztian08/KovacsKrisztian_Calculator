@@ -18,7 +18,7 @@ public class HelloController {
     private void osszeadas() {
         double elsoSzam=elsoszam.getValue();
         double masodikSzam=masodikszam.getValue();
-        double muvelet=elsoSzam+masodikSzam;
+        int muvelet=(int)elsoSzam+(int)masodikSzam;
         eredmeny.setText(""+muvelet);
 
 
@@ -32,14 +32,14 @@ public class HelloController {
     public void szorzas(ActionEvent actionEvent) {
         double elsoSzam=elsoszam.getValue();
         double masodikSzam=masodikszam.getValue();
-        double muvelet=elsoSzam*masodikSzam;
+        int muvelet=(int)elsoSzam*(int)masodikSzam;
         eredmeny.setText(""+muvelet);
     }
 
     public void kivonas(ActionEvent actionEvent) {
         double elsoSzam=elsoszam.getValue();
         double masodikSzam=masodikszam.getValue();
-        double muvelet=elsoSzam-masodikSzam;
+        int muvelet=(int)elsoSzam-(int)masodikSzam;
         eredmeny.setText(""+muvelet);
     }
 
